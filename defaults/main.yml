@@ -5,8 +5,8 @@ packages_update_cache: no
 # Number of seconds to wait between cache updates
 packages_cache_valid_time: 3600
 
-# Default setting for installing suggested packages
-packages_install_suggested_packages: no
+# Default setting for installing recommended packages
+packages_install_recommended_packages: no
 
 # List of packages to install
 packages_to_add: []
