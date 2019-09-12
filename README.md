@@ -1,4 +1,4 @@
-# Ansible Role: Pakages
+# Ansible Role: Packages
 Ubuntu/Debian package management role.
 
 ## Requirements
