@@ -1,0 +1,19 @@
+---
+# Update the cached package lists from the repositories
+packages_update_cache: no
+
+# Number of seconds to wait between cache updates
+packages_cache_valid_time: 3600
+
+# Remove unused packages from the system
+packages_clean_system: no
+
+# List of packages to install
+packages_to_add: []
+
+# List of packages to remove
+packages_to_remove: []
+
+# Default settings
+packages_default_install_recommended_packages: no
+packages_default_purge: no
