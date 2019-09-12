@@ -1,12 +1,18 @@
 ---
-# Default setting for installing suggested packages
-packages_install_suggested_packages: no
-
 # Update the cached package lists from the repositories
 packages_update_cache: no
 
 # Number of seconds to wait between cache updates
 packages_cache_valid_time: 3600
 
+# Default setting for installing suggested packages
+packages_install_suggested_packages: no
+
 # List of packages to install
 packages_to_add: []
+
+# Default setting for purging packages
+packages_purge: no
+
+# List of packages to remove
+packages_to_remove: []

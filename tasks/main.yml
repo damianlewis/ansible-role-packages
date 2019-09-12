@@ -10,3 +10,10 @@
     name: "{{ item.name }}"
     install_recommends: "{{ item.install_suggested_packages | default(packages_install_suggested_packages) }}"
   loop: "{{ packages_to_add }}"
+
+- name: Remove packages
+  apt:
+    name: "{{ item.name }}"
+    state: absent
+    purge: "{{ item.purge | default(packages_purge) }}"
+  loop: "{{ packages_to_remove }}"
