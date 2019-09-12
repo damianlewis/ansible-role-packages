@@ -8,14 +8,14 @@
 - name: Add packages
   apt:
     name: "{{ item.name }}"
-    install_recommends: "{{ item.install_recommended_packages | default(packages_install_recommended_packages) }}"
+    install_recommends: "{{ item.install_recommended_packages | default(packages_default_install_recommended_packages) }}"
   loop: "{{ packages_to_add }}"
 
 - name: Remove packages
   apt:
     name: "{{ item.name }}"
     state: absent
-    purge: "{{ item.purge | default(packages_purge) }}"
+    purge: "{{ item.purge | default(packages_default_purge) }}"
   loop: "{{ packages_to_remove }}"
 
 - name: Removed unused (outdated) packages
