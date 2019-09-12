@@ -17,3 +17,13 @@
     state: absent
     purge: "{{ item.purge | default(packages_purge) }}"
   loop: "{{ packages_to_remove }}"
+
+- name: Removed unused (outdated) packages
+  apt:
+    autoclean: yes
+  when: packages_clean_system | bool
+
+- name: Removed unused (automatically installed) packages
+  apt:
+    autoremove: yes
+  when: packages_clean_system | bool

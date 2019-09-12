@@ -8,11 +8,14 @@ packages_cache_valid_time: 3600
 # Default setting for installing recommended packages
 packages_install_recommended_packages: no
 
-# List of packages to install
-packages_to_add: []
-
 # Default setting for purging packages
 packages_purge: no
+
+# Remove unused packages from the system
+packages_clean_system: no
+
+# List of packages to install
+packages_to_add: []
 
 # List of packages to remove
 packages_to_remove: []
