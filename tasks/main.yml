@@ -1,0 +1,12 @@
+---
+- name: Update packages cache
+  apt:
+    update_cache: yes
+    cache_valid_time: "{{ packages_cache_valid_time }}"
+  when: packages_update_cache | bool
+
+- name: Add packages
+  apt:
+    name: "{{ item.name }}"
+    install_recommends: "{{ item.install_suggested_packages | default(packages_install_suggested_packages) }}"
+  loop: "{{ packages_to_add }}"
