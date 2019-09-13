@@ -15,5 +15,5 @@ packages_to_add: []
 packages_to_remove: []
 
 # Default settings
-packages_default_install_recommended_packages: no
-packages_default_purge: no
+packages_install_recommended_packages: no
+packages_purge: no
